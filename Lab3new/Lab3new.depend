@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1617280911 source:d:\desktop\第二次大一下学期\面向对象程序设计\lab3new\main.cpp
+	<bits/stdc++.h>
+	"gamemap.h"
+	"gamemap.cpp"
+	"player.h"
+	"player.cpp"
+
+1617278013 d:\desktop\第二次大一下学期\面向对象程序设计\lab3new\gamemap.h
+	<bits/stdc++.h>
+
+1617281028 d:\desktop\第二次大一下学期\面向对象程序设计\lab3new\gamemap.cpp
+	<bits/stdc++.h>
+	"gamemap.h"
+
+1617278913 d:\desktop\第二次大一下学期\面向对象程序设计\lab3new\player.h
+	<bits/stdc++.h>
+
+1617280486 d:\desktop\第二次大一下学期\面向对象程序设计\lab3new\player.cpp
+	<bits/stdc++.h>
+	"player.h"
+
