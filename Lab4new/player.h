@@ -8,6 +8,11 @@ class player
 public:
     player();
     player(char* newName);
+    friend host;
+private:
+    string name;
+    int score;
+    int sword;
     string getName()const;
     int getScore()const;
     void displayScore()const;
@@ -20,11 +25,6 @@ public:
     void setSword(int num);
     int getSword()const;
     bool beingcheated;
-    friend host;
-private:
-    string name;
-    int score;
-    int sword;
 };
     char player::cheatsentence[10001]={"\0"};
 #endif

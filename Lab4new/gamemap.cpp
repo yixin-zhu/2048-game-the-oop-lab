@@ -135,22 +135,18 @@ int gameMap::go(int x)
     {
     case 2:
         y=goup();
-        printmap();
         return y;
         break;
     case 3:
         y=goleft();
-        printmap();
         return y;
         break;
     case 4:
         y=goright();
-        printmap();
         return y;
         break;
     case 5:
         y=godown();
-        printmap();
         return y;
         break;
     default:
@@ -392,35 +388,31 @@ bool gameMap::defeat() const
 
 int gameMap::onlyone()
 {
-    gameMap copy1(height,width,wins);
-    gameMap copy2(height,width,wins);
-    gameMap copy3(height,width,wins);
-    gameMap copy4(height,width,wins);
-    for (int i = 0; i < height; i++)
+    gameMap copys[4];
+    int result[4];
+    for(int k=0; k<4; k++)
     {
-        for (int j = 0; j < width; j++)
+        copys[k]=gameMap(height,width,wins);
+        for (int i = 0; i < height; i++)
         {
-            copy1.a[i][j]=copy2.a[i][j]=copy3.a[i][j]=copy4.a[i][j]=a[i][j];
+            for (int j = 0; j < width; j++)
+            {
+                copys[k].a[i][j]=a[i][j];
+            }
         }
+        copys[k].flag=0;
+        copys[k].go(k+2);
+        result[k]=copys[k].flag;
     }
-    copy1.flag=copy2.flag=copy3.flag=copy4.flag=0;
-    copy1.goup();
-    int q=copy1.flag;
-    copy2.goleft();
-    int w=copy2.flag;
-    copy3.goright();
-    int e=copy3.flag;
-    copy4.godown();
-    int r=copy4.flag;
-    if((q+w+e+r)==1)
+    if((result[0]+result[1]+result[2]+result[3])==1)
     {
-        if(q)
+        if(result[0])
             onlyword='w';
-        if(w)
+        if(result[1])
             onlyword='a';
-        if(e)
+        if(result[2])
             onlyword='s';
-        if(r)
+        if(result[3])
             onlyword='z';
         return 1;
     }

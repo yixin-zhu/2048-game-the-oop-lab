@@ -85,7 +85,7 @@ void host::doubleplay(char *buff)
     player *selection[2] = {&player1, &player2};
     player *now = selection[mymap.getround() % 2];
     mymap.flag = 0;
-    static bool curse=false;
+    curse=false;
     int used=0;
     switch (now->operate(buff))
     {
@@ -99,6 +99,7 @@ void host::doubleplay(char *buff)
     case 5:
         system("cls");
         now->addScore(mymap.go(now->operate(buff)));
+        mymap.printmap();
         now->displayScore();
         if(now->getSword()&&used==1)
         {
@@ -142,6 +143,7 @@ void host::singleplay(char *buff)
     case 5:
         system("cls");
         player1.addScore(mymap.go(player1.operates(buff)));
+        mymap.printmap();
         player1.displayScore();
         break;
     default:

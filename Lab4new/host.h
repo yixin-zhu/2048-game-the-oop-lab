@@ -19,6 +19,7 @@ private:
     player player1;
     player player2;
     int mode;
+    bool curse;
     void setmode();
     void ModeSelect(int* x);
     void doubleplay(char* buff);
