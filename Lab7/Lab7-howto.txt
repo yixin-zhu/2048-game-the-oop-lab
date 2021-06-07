@@ -1,0 +1,17 @@
+Lab7中实现类之间解耦的方法  
+朱奕新 19307090029
+
+1日志功能
+日志功能的定义和实现单独写在 Log.h/Log.cpp 文件中。
+采用观察者模式。定义和实现了Observer基类，类似于接口，可以对观察对象的事件产生反应。Log类继承了Observer基类。
+定义和实现了Subject基类，类似于接口，有一个vector可以放置各种观察者。gameMap类继承了Subject基类。
+程序中，用Log类实例ObserverLog来监测gameMap类实例myMap的变化。如当myMap每次加分时，即通知观察者，ObserverLog随即记录。
+
+2奖励功能
+奖励功能的定义和实现单独写在 Bonus.h/Bonus.cpp 文件中。
+Bonus类继承了Subject基类。它可以产生奖励信息BonusInfo。
+如果日志功能也开启，ObserverLog监测Bonus类实例myBonus的变化。
+如当myBonus每次产生奖励信息时，即通知观察者，ObserverLog随即记录。
+
+
+
