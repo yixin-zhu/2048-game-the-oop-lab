@@ -8,11 +8,11 @@ class Version : public ActionObserver
 {
 public:
     Version();
-    Version(int newID, int newLastScore, const GameMap &g);
-    stack<Record*> records;
+    Version(int newID, int newLastScore, const GameMap &g);   
     void actionAccepted(Action *a);
     void actionPerformed(Action *a);
-
+    void clearRecords();
 private:
+    stack<Record*> records;
 };
 #endif

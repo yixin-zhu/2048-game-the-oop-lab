@@ -50,3 +50,13 @@ void Version::actionPerformed(Action *a)
         break;
     }
 }
+
+void Version::clearRecords()
+{
+    while (!records.empty())
+    {
+        Record *top = records.top();
+        records.pop();
+        delete top;
+    }
+}

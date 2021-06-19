@@ -11,14 +11,14 @@ class Hostmulti : public Hostbase
 {
 public:
     Hostmulti();
-    ~Hostmulti(); 
+    ~Hostmulti();
     Hostmulti(int mapSize);
     Hostmulti(int mapSize, int playerNumber);
     void modeGame();
+
+private:
     void playGame(char *buff);
     void multiEndGame() const;
     int refreshPlayer() const;
-
-    private:
 };
 #endif

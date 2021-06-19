@@ -42,6 +42,7 @@ void Hostsingle::modeGame()
             break;
         }
     }
+    myVersion.clearRecords();
 }
 
 void Hostsingle::playGame(char *buff)

@@ -11,10 +11,10 @@ class ObtainBonusAction :  public Action
 {
 public:
     ObtainBonusAction();
-    ObtainBonusAction(Player* p, double timeDifference);
-    double timeDifference;
+    ObtainBonusAction(Player* p, double timeDifference); 
     void execute();
     string getDetail();
 private:
+    double timeDifference;
 };
 #endif

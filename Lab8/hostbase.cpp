@@ -35,3 +35,4 @@ bool Hostbase::askForUndo(Player *p)
     }
     return false;
 }
+

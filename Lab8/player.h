@@ -21,5 +21,8 @@ public:
 private:
     string name;
     int score;
+
+
+    
 };
 #endif

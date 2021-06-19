@@ -12,10 +12,11 @@ class PerformMoveAction : public Action
 public:
     PerformMoveAction();
     PerformMoveAction(Player* p, GameMap* g, int dir);
-    int direction; //2 up 3 left 4 right 5 down 
     void execute();
     string getDetail();
 
 private:
+    int direction; //2 up 3 left 4 right 5 down 
+
 };
 #endif

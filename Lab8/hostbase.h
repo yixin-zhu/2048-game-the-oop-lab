@@ -17,7 +17,6 @@ public:
     Hostbase();
     Hostbase(int mapSize);
     Hostbase(int mapSize, int playerNumber);
-    void initial();
     int playerNumber;
     Bonus myBonus;
     Log myLog;
@@ -26,9 +25,10 @@ public:
     vector<Player> players;
     GameMap myMap;
     ActionExecuter myActionExecuter;
-    virtual void modeGame() = 0; //虚函数
-    virtual void playGame(char *buff) = 0; //虚函数
+    virtual void modeGame() = 0; //虚函数r;
+
+protected:
     bool askForUndo(Player* p);
-private:
+    virtual void playGame(char *buff) = 0; //虚函数
 };
 #endif

@@ -9,10 +9,10 @@ class Record
 public:
     Record();
     Record(Player* p, int newRecordScore,const GameMap& g );
-    Player* recordPlayer;
     int recordScore;
     GameMap recordMap;
 private:
+    Player* recordPlayer;
     
 };
 #endif

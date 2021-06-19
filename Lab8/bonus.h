@@ -9,19 +9,18 @@
 #include "obtainbonusaction.h"
 using namespace std;
 
-class Bonus  : public ActionObserver
+class Bonus : public ActionObserver
 {
 public:
     Bonus();
+    void actionAccepted(Action *a);
+    void actionPerformed(Action *a);
+    ActionExecuter *ae;
+
+private:
     void refreshTimeDifference();
     double getTimeDifference();
     double timeDifference;
     struct timeval lastTime;
-    void actionAccepted(Action *a);
-    void actionPerformed(Action* a);
-    ActionExecuter* ae;
-private:
-   
-    
 };
 #endif

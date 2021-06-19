@@ -15,13 +15,10 @@ class Log : public ActionObserver
 {
 public:
     Log();
-    string getLogTime();
     void clearLog();
-    void update(string playerName, GameMap *g);
-    void response(string playerName, Bonus *b);
     void actionAccepted(Action *a);
     void actionPerformed(Action *a);
-
 private:
+    string getLogTime();
 };
 #endif

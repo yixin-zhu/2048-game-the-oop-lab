@@ -22,7 +22,6 @@ public:
     int goWithoutRefresh(int x);
     int testFourDir() ;
     int flag;
-    int scoreInfo(string s);
     string legalWords;
     int a[MAXN][MAXN];
     vector<int> getRandomNumberPlace(); 

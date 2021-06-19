@@ -10,14 +10,15 @@ class Simulation
 {
 public:
     Simulation();
-    GameMap simulationMap;
-    char command[1001];
     void simulate(char *argv[]);
+private:
     void readIn(char *argv[]);
     void playSimulation(char *argv[]);
-    int randomNumber=2;
-private:
     int convert(char* buff)const;
+    int randomNumber=2;
+    GameMap simulationMap;
+    char command[1001];
 };
+
 
 #endif

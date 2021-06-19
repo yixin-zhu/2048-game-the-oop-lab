@@ -28,7 +28,7 @@ void Hostmulti::modeGame()
     for (int i = 0; i < playerNumber; i++)
     {
         Player *tempPlayer = new Player();
-        players.push_back(*tempPlayer); // TODO delete
+        players.push_back(*tempPlayer);
         players[i].whatIsYourName();
     }
     printf("Let's begin the game!Please enter command.\n");
@@ -43,6 +43,7 @@ void Hostmulti::modeGame()
             break;
         }
     }
+    myVersion.clearRecords();
 }
 
 void Hostmulti::playGame(char *buff)

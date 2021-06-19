@@ -14,14 +14,8 @@ public:
     Hostsingle(int mapSize);
     Hostsingle(int mapSize, int playerNumber);
     void modeGame();
-    void initial();
 
 private:
-    GameMap myMap;
-    vector<Player> players;
-    int playerNumber;
-    int mode;
-    void modeSelect();
     void playGame(char *buff);
 };
 #endif
