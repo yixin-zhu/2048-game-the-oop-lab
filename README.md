@@ -1,5 +1,4 @@
 # 2048-game-the-oop-lab
-as title
 
 ### 编译运行环境
 Windows 10
