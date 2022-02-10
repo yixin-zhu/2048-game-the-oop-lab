@@ -1,5 +1,5 @@
-# 2048-game-the-oop-lab
-
+# super 2048 game
+# 超级 2048 游戏（支持双人对战、道具使用）
 ### 编译运行环境
 Windows 10
 
